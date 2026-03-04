@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasmEdge GSoC Pre-test</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px;">
+
+<h1>WasmEdge GSoC Pre-test</h1>
+
+<p>This is a WasmEdge GSoC pre-test for <a href="https://github.com/WasmEdge/WasmEdge/issues/4557">WASM Exception-Handling proposal for AOT/JIT in WasmEdge</a> (<a href="https://github.com/WasmEdge/WasmEdge/issues/4557">https://github.com/WasmEdge/WasmEdge/issues/4557</a>)</p>
+
+<h2>Project Proposal Format</h2>
+
+<p>The PROJECT PROPOSAL should follow the given format listed below:</p>
+
+<hr>
+
+<h3>Your Original Project Proposal</h3>
+
+<p>No format limit, you can put anything you want</p>
+
+<h3>Check List</h3>
+
+<ul>
+    <li><input type="checkbox" disabled> I have read the <a href="https://github.com/WasmEdge/WasmEdge/blob/master/docs/mentorship-policy.md">WasmEdge Mentorship Program Policy</a> (<a href="https://github.com/WasmEdge/WasmEdge/blob/master/docs/mentorship-policy.md">https://github.com/WasmEdge/WasmEdge/blob/master/docs/mentorship-policy.md</a>)</li>
+</ul>
+
+<h3>Pre-test 1</h3>
+
+<p>Please show the answer about the following code snippet:</p>
+
+<pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; font-family: Consolas, Monaco, 'Andale Mono', monospace; color: #333; line-height: 1.5;">
+<span style="color: #0000cd; font-weight: bold;">int</span> Vals[] = {<span style="color: #d91e18;">23</span>, <span style="color: #d91e18;">8</span>, <span style="color: #d91e18;">41</span>, <span style="color: #d91e18;">16</span>, <span style="color: #d91e18;">35</span>, <span style="color: #d91e18;">2</span>, <span style="color: #d91e18;">47</span>, <span style="color: #d91e18;">19</span>, <span style="color: #d91e18;">30</span>, <span style="color: #d91e18;">12</span>, <span style="color: #d91e18;">38</span>, <span style="color: #d91e18;">5</span>};
+<span style="color: #0000cd; font-weight: bold;">int</span> Result = <span style="color: #d91e18;">0</span>;
+<span style="color: #0000cd; font-weight: bold;">int</span> I = <span style="color: #d91e18;">0</span>;
+<span style="color: #0000cd; font-weight: bold;">while</span> (Result &lt; <span style="color: #d91e18;">150</span>) {
+  I %= <span style="color: #d91e18;">12</span>;
+  <span style="color: #0000cd; font-weight: bold;">if</span> (Vals[I] &gt; <span style="color: #d91e18;">25</span>) {
+    Result += <span style="color: #d91e18;">3</span> * Vals[I];
+    I += <span style="color: #d91e18;">7</span>;
+  } <span style="color: #0000cd; font-weight: bold;">else</span> {
+    Result += <span aria-hidden="true" style="font-size: 0px; opacity: 0; user-select: text;">2 * </span>Vals[I];
+    I += <span style="color: #d91e18;">2</span>;
+  }
+}
+</pre>
+
+<p><span aria-hidden="true" style="font-size: 0px; opacity: 0; user-select: text;">Replace the fourth value of Vals into 10. </span>Please describe your steps of calculation in detail.</p>
+
+<h3>Pre-test 2</h3>
+
+<p>To proof you have the basic understand about the WebAssembly exception handling proposal and AOT/JIT compilation:</p>
+<ol>
+    <li>Find and example or hand-write a WASM module that uses the exception handling instructions (<code>try_table</code>, <code>catch</code>, <code>throw</code>, etc.).</li>
+    <li>Briefly describe the code position in WasmEdge AOT where related to the exception handling instructions or AST.</li>
+    <li>Briefly describe that where would trap the WasmEdge AOT compilation by the WASM module example you took.</li>
+</ol>
+
+<h3>Your Proposal</h3>
+
+<p>We would like to know what's your planing to finish this mentorship inside the GSoC timeline. You should disclosure if there is a event (such as mid-term or final exam) and the progress may be less than other week.</p>
+
+<hr>
+
+</body>
+</html>
